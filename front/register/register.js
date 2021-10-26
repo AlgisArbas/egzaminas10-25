@@ -26,7 +26,7 @@ button.onclick = () => {
         },
         body: JSON.stringify(inputs)
     };
-    fetch('http://localhost:3000/registrate')
+    fetch('http://localhost:3000/register')
         .then(res => res.json())
         .then(data => {
             console.log(data)

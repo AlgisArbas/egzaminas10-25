@@ -8,11 +8,27 @@ const app = express()
 app.use(morgan('common'))
 app.use(cors())
 app.use(express.json())
-app.listen(3000, console.log('serveris bakery app'))
+app.listen(3000, console.log('serveris egzaminas'))
 const dbConfig = require('./dbConfig')
-const mainRouter = require("./routes/routes");
+// const mainRouter = require("./routes/routes");
 
-
+// app.post('/register', (req, res) => {
+//     const user = req.body
+//     console.log('gavom useri', user)
+//     const conn = mysql.createConnection(dbConfig);
+//     const sql = `
+//         INSERT INTO users (full_name, email, password)
+//         VALUES (?, ?, ?)
+//         `;
+//     conn.execute(sql, [user.name, user.email, user.pass1], (err, result) => {
+//         if(err) return console.log('err', err);
+//         console.log('user created', result);
+//         res.send({msg: 'irasas pavyko'});
+//     })
+//     conn.end()
+//     console.log('front OK')
+//     res.send({msg: 'irasas pavyko'});
+// })
 
 // app.get('/register', (req, res) => {
 //     console.log('kontaktas');
